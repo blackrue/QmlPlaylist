@@ -1,0 +1,25 @@
+import QtQuick 2.0
+import QtQuick.Window 2.0
+
+Rectangle {
+    width: Screen.width / 2
+    height: Screen.height / 12
+    property string playlistName: "playList"
+    property string headerRectColor: "black"
+    property string headerTextColor: "white"
+    gradient: Gradient{
+        GradientStop {position: 0.0; color: "grey"}
+        GradientStop {position: 1.0; color: "black"}
+    }
+
+    Text {
+        id: playlistTitleText
+        anchors.centerIn:  parent
+        width: Screen.width/8
+        text: playlistName
+        height: 25
+        color: headerTextColor
+        font.pixelSize: 25
+    }
+
+}
